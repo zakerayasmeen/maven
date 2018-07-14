@@ -31,7 +31,7 @@ def tests
 try {
 
 def node = jenkinsEnv.labelForOS(buildOs) 
-node("'${node}' && '!ubuntu-eu2'") {
+node("\"${node}\" && !ubuntu-eu2") {
     dir('build') {
         stage('Checkout') {
             checkout scm
