@@ -23,7 +23,6 @@ import java.util.Objects;
 
 import java.util.Properties;
 
-import org.apache.commons.lang3.Validate;
 import org.apache.maven.model.Profile;
 import org.apache.maven.model.building.SimpleProblemCollector;
 import org.apache.maven.model.profile.DefaultProfileActivationContext;
