@@ -74,7 +74,7 @@ for (String os in runITsOses) {
         String stageId = "${os}-jdk${jdk}"
         String stageLabel = "Run ITs ${os.capitalize()} Java ${jdk}"
         runITsTasks[stageId] = {
-            node("\"${osLabel}\" && !ubuntu-eu2") {
+            node(jenkinsEnv.nodeSelection(osLabel)) {
                 stage("${stageLabel}") {
                     // on Windows, need a short path or we hit 256 character limit for paths
                     // using EXECUTOR_NUMBER guarantees that concurrent builds on same agent
